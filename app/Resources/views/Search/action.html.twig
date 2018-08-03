@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <a href="https://github.com/VincentChalnot/SidusFilterBundle">
+        <img class="fixed-top" style="left:auto"
+             src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub">
+    </a>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col offset-lg-1 my-3">
+                <h2>Sidus/FilterBundle Demo</h2>
+                <p>Checkout the documentation on Github:
+                    <a href="https://github.com/VincentChalnot/SidusFilterBundle">
+                        https://github.com/VincentChalnot/SidusFilterBundle
+                    </a></p>
+            </div>
+        </div>
+        {{ form_start(form) }}
+        <div class="row">
+            <div class="col-lg-2 offset-lg-1">
+                <h4>Filters</h4>
+                {{ form_widget(form.filters) }}
+                <a href="{{ path('AppBundle\\Action\\SearchAction') }}" class="btn btn-default" role="button">Reset</a>
+                <button type="submit" class="btn btn-primary">Filter</button>
+            </div>
+            <div class="col-lg-8">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">
+                            {{ form_widget(form.sortable.id, {label: '#'}) }}
+                        </th>
+                        <th scope="col">
+                            {{ form_widget(form.sortable.title, {label: 'Title'}) }}
+                        </th>
+                        <th scope="col">
+                            {{ form_widget(form.sortable.publicationDate, {label: 'Publication Date'}) }}
+                        </th>
+                        <th scope="col">
+                            {{ form_widget(form.sortable.publicationStatus, {label: 'Status'}) }}
+                        </th>
+                        <th scope="col">
+                            Author
+                        </th>
+                        <th scope="col">
+                            Categories
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for news in results %}
+                        {# @var news \AppBundle\Entity\News #}
+                        <tr>
+                            <th scope="row">{{ news.id }}</th>
+                            <td>{{ news.title }}</td>
+                            <td>{{ news.publicationDate|date }}</td>
+                            <td>
+                                <span class="badge badge-{{ statusBadge[news.publicationStatus] }}">
+                                    {{ news.publicationStatus }}
+                                </span>
+                            </td>
+                            <td title="{{ news.author.email }}">{{ news.author }}</td>
+                            <td>{{ news.categories|join(', ') }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
