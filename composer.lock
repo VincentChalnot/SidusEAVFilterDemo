@@ -1947,12 +1947,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusFilterBundle.git",
-                "reference": "e5b29421679e2c88073aa72f9b1adc34ec3c12ed"
+                "reference": "32ec81a1d31ffb5352a3352c7e8ed079c21aeb0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VincentChalnot/SidusFilterBundle/zipball/e5b29421679e2c88073aa72f9b1adc34ec3c12ed",
-                "reference": "e5b29421679e2c88073aa72f9b1adc34ec3c12ed",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusFilterBundle/zipball/32ec81a1d31ffb5352a3352c7e8ed079c21aeb0a",
+                "reference": "32ec81a1d31ffb5352a3352c7e8ed079c21aeb0a",
                 "shasum": ""
             },
             "require": {
@@ -1992,7 +1992,7 @@
                 "filter",
                 "sort"
             ],
-            "time": "2018-08-03T11:03:26+00:00"
+            "time": "2018-08-03T16:35:03+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

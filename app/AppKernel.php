@@ -17,6 +17,7 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
 
+            new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
             new Sidus\BaseBundle\SidusBaseBundle(),
             new Sidus\FilterBundle\SidusFilterBundle(),
             new AppBundle\AppBundle(),
