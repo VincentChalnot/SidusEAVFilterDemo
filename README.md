@@ -1,4 +1,4 @@
-Sidus/EAVFilterDemo
+Sidus/FilterDemo
 ===================
 
 Simple application using Symfony 3.4 and Bootstrap 4 to demonstrate the potential of the
